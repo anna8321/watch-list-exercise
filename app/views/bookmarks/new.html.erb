@@ -1,0 +1,11 @@
+<h2>List's bookmarks</h2>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :comment %>
+  <%= f.submit "Add Movie" %>
+<% end %>
+
+
+
+<%= link_to 'Back', lists_path %>
