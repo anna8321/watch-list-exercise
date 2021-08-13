@@ -22,40 +22,22 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1>My beautiful <strong>Movie</strong> <strong>List</strong>!</h1>
+    <p>You can exit the website with this button.</p>
     <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
 <h2> My lists:</h2>
 
-  <div class="card mb-5" style="width: 18rem;">
-    <p class="card-text"> <% @lists.each do |list| %>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <li><%= link_to list.name, list %></li>
-        <% end %></p>
-    </div>
-  </div>
 
-  <div class="card mb-5" style="width: 18rem;">
-    <p class="card-text"> <% @lists.each do |list| %>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <li><%= link_to list.name, list %></li>
-        <% end %></p>
-    </div>
-  </div>
-
-  <div class="card mb-5" style="width: 18rem;">
-    <p class="card-text"> <% @lists.each do |list| %>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <li><%= link_to list.name, list %></li>
-        <% end %></p>
-    </div>
-  </div>
-
+    <% @lists.each do |list| %>
+      <div class="card mb-5" style="width: 18rem;">
+        <div class="card-body">
+          <img src="..." class="card-img-top" alt="...">
+          <li><%= link_to list.name, list %></li>
+        </div>
+      </div>
+    <% end %>
 
 <%= link_to 'Create a movie List', new_list_path, class: "btn btn-primary ml 3" %>
