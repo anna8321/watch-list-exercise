@@ -23,21 +23,21 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>My beautiful <strong>Movie</strong> <strong>List</strong>!</h1>
-    <p>You can exit the website with this button.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <p>Welcome again, Buddy!</p>
+    <a class="btn btn-flat" href="https://www.google.com/">Exit now</a>
   </div>
 </div>
 
 <h2> My lists:</h2>
 
-
+<div class="cards">
     <% @lists.each do |list| %>
-      <div class="card mb-5" style="width: 18rem;">
+      <div class="card mb-5" >
         <div class="card-body">
           <img src="..;" class="card-img-top" alt="...">
           <p class="list-name"><%= link_to list.name, list %></p>
         </div>
       </div>
     <% end %>
-
+</div>
 <%= link_to 'Create a movie List', new_list_path, class: "btn btn-primary ml 3" %>
